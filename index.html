@@ -1,1 +1,228 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RizzosAI — Make It Legendary 👑</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: linear-gradient(135deg, #1a1a2e 0%, #f9d423 100%);
+      color: #fff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: rgba(30,30,50,0.85);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      padding: 32px;
+      animation: fadeIn 1.5s;
+    }
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 0.2em;
+      text-align: center;
+      color: #ffd700;
+      letter-spacing: 2px;
+      animation: slideDown 1s;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 1.3em;
+      margin-bottom: 1.5em;
+      color: #f9d423;
+      animation: fadeIn 2s;
+    }
+    .block {
+      margin: 2em 0;
+      padding: 1.5em;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.07);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      animation: fadeInUp 1.2s;
+    }
+    .block h2 {
+      color: #ffd700;
+      margin-bottom: 0.5em;
+    }
+    .countdown {
+      font-size: 2em;
+      text-align: center;
+      margin: 1em 0;
+      color: #f9d423;
+      font-weight: bold;
+      letter-spacing: 2px;
+      animation: pulse 1s infinite alternate;
+    }
+    .leaderboard {
+      margin-top: 1em;
+      background: rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 1em;
+      animation: fadeInUp 1.5s;
+    }
+    .leaderboard h3 {
+      color: #ffd700;
+      margin-bottom: 0.5em;
+    }
+    .leaderboard-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .leaderboard-list li {
+      padding: 0.5em 0;
+      font-size: 1.1em;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .crown {
+      font-size: 1.3em;
+      color: #ffd700;
+      margin-right: 0.3em;
+      animation: crownPop 1s infinite alternate;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 0.7em;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    th {
+      color: #ffd700;
+      background: rgba(255,255,255,0.08);
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px);} to { opacity: 1; transform: translateY(0);} }
+    @keyframes slideDown { from { opacity: 0; transform: translateY(-40px);} to { opacity: 1; transform: translateY(0);} }
+    @keyframes pulse { from { color: #ffd700; } to { color: #fff; } }
+    @keyframes crownPop { from { transform: scale(1); } to { transform: scale(1.2); } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>RizzosAI Is Live 👑</h1>
+    <div class="subtitle">One recruit covers you for life. The second builds your empire.</div>
+    
+    <div class="block">
+      <h2>💸 The Compensation Plan</h2>
+      <p>
+        Everyone joins with a daily admin fee (up to <b>$500</b>).<br>
+        You only need <b>one person</b> to cover that fee.<br>
+        That person pays you daily.<br>
+        Your second recruit gets passed up to your sponsor.<br>
+        After that? Every recruit is yours to keep.<br>
+        And every second recruit they bring in? Also gets passed up to you.<br>
+        <b>It’s a referral river that flows uphill.</b> You build once. You earn forever.
+      </p>
+      <div class="countdown" id="countdown"></div>
+    </div>
+    
+    <div class="block">
+      <h2>🧠 Why It’s Brilliant</h2>
+      <ul>
+        <li>Daily payments = daily dopamine</li>
+        <li>No chasing, no spreadsheets</li>
+        <li>You inherit second recruits from everyone below you</li>
+        <li>$500/day potential from a single recruit</li>
+        <li>Infinite depth. Automated flow. No burnout.</li>
+      </ul>
+    </div>
+    
+    <div class="block">
+      <h2>😂 The Vibe</h2>
+      <p>This isn’t MLM. This is <b>MLF — Money Loves Flow</b>.</p>
+      <table>
+        <tr>
+          <th>Feature</th>
+          <th>MLM</th>
+          <th>MLF (RizzosAI)</th>
+        </tr>
+        <tr>
+          <td>Recruit stress</td>
+          <td>“You need 5 people by Friday”</td>
+          <td>“Just bring two. Then chill.”</td>
+        </tr>
+        <tr>
+          <td>Fees</td>
+          <td>Monthly, hidden, sneaky</td>
+          <td>$0 after your second recruit</td>
+        </tr>
+        <tr>
+          <td>Loyalty</td>
+          <td>Everyone’s chasing rank</td>
+          <td>Everyone’s building your empire</td>
+        </tr>
+        <tr>
+          <td>Payments</td>
+          <td>Manual, messy</td>
+          <td>Automated, daily, clean</td>
+        </tr>
+        <tr>
+          <td>Depth</td>
+          <td>Capped at 10 levels</td>
+          <td>Infinite inheritance</td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="block leaderboard">
+      <h3>🏆 Leaderboard</h3>
+      <ul class="leaderboard-list" id="leaderboard">
+        <li><span class="crown">👑</span> Grant — $500/day</li>
+        <li>Coey — $350/day</li>
+        <li>Alex — $200/day</li>
+      </ul>
+      <small style="color:#ffd700;">Want your name here? Recruit, earn, repeat.</small>
+    </div>
+    
+    <div class="block">
+      <h2>🎨 What You Can Do</h2>
+      <ul>
+        <li>Help dress up the homepage — cinematic transitions, countdown blocks, leaderboard logic</li>
+        <li>Make it feel like a king’s onboarding funnel, not a startup splash page</li>
+        <li>Add humor, polish, and viral pull to every block</li>
+      </ul>
+    </div>
+    
+    <div class="block" style="text-align:center;">
+      <h2>🔥 Final Words</h2>
+      <p>
+        We’re not just launching a site. We’re launching a dynasty.<br>
+        And you’re part of the build crew.<br>
+        <b>—Grant 👑</b>
+      </p>
+    </div>
+  </div>
+  <script>
+    // Cinematic countdown block (next payout in 12 hours)
+    function updateCountdown() {
+      const now = new Date();
+      const nextPayout = new Date();
+      nextPayout.setHours(24,0,0,0); // Midnight next day
+      const diff = nextPayout - now;
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      document.getElementById('countdown').textContent =
+        `Next payout in ${hours}h ${minutes}m ${seconds}s`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
