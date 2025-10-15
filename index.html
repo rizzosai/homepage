@@ -1,228 +1,169 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>RizzosAI — Make It Legendary 👑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airizzos Splash</title>
   <style>
     body {
-      background: linear-gradient(135deg, #1a1a2e 0%, #f9d423 100%);
-      color: #fff;
-      font-family: 'Montserrat', Arial, sans-serif;
-      margin: 0;
+      background: linear-gradient(135deg, #e41c23 0%, #fff 50%, #1c3fe4 100%);
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Arial, sans-serif;
       padding: 0;
-      overflow-x: hidden;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      background: rgba(30,30,50,0.85);
-      border-radius: 24px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-      padding: 32px;
-      animation: fadeIn 1.5s;
+      margin: 0;
     }
     h1 {
-      font-size: 2.8em;
-      margin-bottom: 0.2em;
-      text-align: center;
-      color: #ffd700;
-      letter-spacing: 2px;
-      animation: slideDown 1s;
+      font-size: 3em;
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+      color: #e41c23;
+      text-shadow: 2px 2px 0 #fff, 4px 4px 0 #1c3fe4;
     }
     .subtitle {
-      text-align: center;
       font-size: 1.3em;
-      margin-bottom: 1.5em;
-      color: #f9d423;
-      animation: fadeIn 2s;
-    }
-    .block {
-      margin: 2em 0;
-      padding: 1.5em;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.07);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      animation: fadeInUp 1.2s;
-    }
-    .block h2 {
-      color: #ffd700;
-      margin-bottom: 0.5em;
-    }
-    .countdown {
-      font-size: 2em;
-      text-align: center;
-      margin: 1em 0;
-      color: #f9d423;
+      color: #1c3fe4;
+      margin-bottom: 2em;
       font-weight: bold;
-      letter-spacing: 2px;
-      animation: pulse 1s infinite alternate;
     }
-    .leaderboard {
-      margin-top: 1em;
-      background: rgba(255,255,255,0.12);
+    .sales-copy {
+      background: rgba(255,255,255,0.95);
       border-radius: 12px;
-      padding: 1em;
-      animation: fadeInUp 1.5s;
+      box-shadow: 0 0 30px #1c3fe4;
+      padding: 2em;
+      max-width: 900px;
+      margin: 2em auto;
+      color: #222;
+      font-size: 1.15em;
+      line-height: 1.7;
     }
-    .leaderboard h3 {
-      color: #ffd700;
-      margin-bottom: 0.5em;
-    }
-    .leaderboard-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .leaderboard-list li {
-      padding: 0.5em 0;
-      font-size: 1.1em;
+    .packages {
       display: flex;
-      align-items: center;
-      gap: 0.5em;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      flex-wrap: wrap;
+      gap: 1.5em;
+      margin: 2em 0;
+      justify-content: center;
     }
-    .crown {
-      font-size: 1.3em;
-      color: #ffd700;
-      margin-right: 0.3em;
-      animation: crownPop 1s infinite alternate;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1em;
-      background: rgba(255,255,255,0.05);
+    .package {
+      background: #e41c23;
+      color: #fff;
       border-radius: 8px;
-      overflow: hidden;
+      box-shadow: 0 0 10px #1c3fe4;
+      padding: 1.2em;
+      min-width: 180px;
+      max-width: 220px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.1em;
     }
-    th, td {
-      padding: 0.7em;
-      text-align: left;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+    .diagram {
+      margin: 3em auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #e41c23;
+      padding: 2em;
+      max-width: 700px;
+      text-align: center;
     }
-    th {
-      color: #ffd700;
-      background: rgba(255,255,255,0.08);
+    .diagram svg {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 1em;
     }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px);} to { opacity: 1; transform: translateY(0);} }
-    @keyframes slideDown { from { opacity: 0; transform: translateY(-40px);} to { opacity: 1; transform: translateY(0);} }
-    @keyframes pulse { from { color: #ffd700; } to { color: #fff; } }
-    @keyframes crownPop { from { transform: scale(1); } to { transform: scale(1.2); } }
+    a {
+      color: #fff;
+      background: #1c3fe4;
+      padding: 0.7em 1.2em;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 2em;
+      font-size: 1.1em;
+      font-weight: bold;
+      box-shadow: 0 2px 8px #e41c23;
+      transition: background 0.2s;
+    }
+    a:hover {
+      background: #e41c23;
+    }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>RizzosAI Is Live 👑</h1>
-    <div class="subtitle">One recruit covers you for life. The second builds your empire.</div>
-    
-    <div class="block">
-      <h2>💸 The Compensation Plan</h2>
-      <p>
-        Everyone joins with a daily admin fee (up to <b>$500</b>).<br>
-        You only need <b>one person</b> to cover that fee.<br>
-        That person pays you daily.<br>
-        Your second recruit gets passed up to your sponsor.<br>
-        After that? Every recruit is yours to keep.<br>
-        And every second recruit they bring in? Also gets passed up to you.<br>
-        <b>It’s a referral river that flows uphill.</b> You build once. You earn forever.
-      </p>
-      <div class="countdown" id="countdown"></div>
+  <h1>Airizzos</h1>
+  <div class="subtitle">Red, White & Blue. Funny. Profitable. Unstoppable.</div>
+  <div class="sales-copy">
+    <!-- Begin long-form sales copy -->
+    <h2 style="color:#e41c23;">How You Make Money (and Laugh Doing It)</h2>
+    <p>Welcome to Airizzos, the only program where you can start for as little as $29 and scale up to $499 for the full empire experience. Here’s how you get paid—every day, not once a week, not once a month. Cash in your bank, every single day. And yes, it’s as fun as it sounds.</p>
+    <p>Picture this: You join, you get your own link, and every second referral you bring in gets passed up to your sponsor (that’s right, the person who brought you in). But wait, there’s more! If you upgrade to the $499 package, you enter the legendary lineup. Your site gets advertised until you score three sales. After that, the next person in the lineup gets their turn. It’s a win-win, and the queue keeps moving. The more you sell, the bigger your rewards. Top sellers get leaderboard clout, badges, and streak bonuses. The more you sell, the bigger your rewards!</p>
+    <p>Let’s break down the packages:</p>
+    <div class="packages">
+      <div class="package">$29<br><span style="font-size:0.9em;">Starter Access</span><br>Get in, get your link, start earning.</div>
+      <div class="package">$49<br><span style="font-size:0.9em;">Bronze</span><br>More features, more earning power.</div>
+      <div class="package">$99<br><span style="font-size:0.9em;">Silver</span><br>Unlock extra bonuses and leaderboard access.</div>
+      <div class="package">$248<br><span style="font-size:0.9em;">Gold</span><br>Premium perks, higher payouts, more visibility.</div>
+      <div class="package">$499<br><span style="font-size:0.9em;">Empire Builder</span><br>Your own hosting, unlimited data, daily payouts, lineup advertising, and the chance to double your money with every sale.</div>
     </div>
-    
-    <div class="block">
-      <h2>🧠 Why It’s Brilliant</h2>
-      <ul>
-        <li>Daily payments = daily dopamine</li>
-        <li>No chasing, no spreadsheets</li>
-        <li>You inherit second recruits from everyone below you</li>
-        <li>$500/day potential from a single recruit</li>
-        <li>Infinite depth. Automated flow. No burnout.</li>
-      </ul>
+    <h2 style="color:#1c3fe4; margin-top:2em;">How the Pass-Up & Lineup Works</h2>
+    <ul style="text-align:left; font-size:1.1em;">
+      <li>When you join, your sponsor gets your second referral as a bonus pass-up.</li>
+      <li>After you upgrade to the $499 tier, your link enters the lineup—your site gets advertised until you score 3 sales (including your pass-up).</li>
+      <li>Once you get 3, the next person in the lineup gets their turn. It’s a win-win, and the queue keeps moving!</li>
+      <li>Every sale means instant daily payouts. No waiting, just cash in your bank every day.</li>
+      <li>Top sellers get leaderboard clout, badges, and streak bonuses. The more you sell, the bigger your rewards!</li>
+    </ul>
+    <div class="diagram">
+      <h3 style="color:#e41c23;">Your Empire Tree</h3>
+      <svg viewBox="0 0 700 300">
+        <circle cx="350" cy="40" r="30" fill="#e41c23" />
+        <text x="350" y="45" text-anchor="middle" fill="#fff" font-size="18">You</text>
+        <!-- 10 people below -->
+        <g>
+          <circle cx="100" cy="150" r="22" fill="#1c3fe4" />
+          <text x="100" y="155" text-anchor="middle" fill="#fff" font-size="14">1</text>
+          <circle cx="180" cy="150" r="22" fill="#1c3fe4" />
+          <text x="180" y="155" text-anchor="middle" fill="#fff" font-size="14">2</text>
+          <circle cx="260" cy="150" r="22" fill="#1c3fe4" />
+          <text x="260" y="155" text-anchor="middle" fill="#fff" font-size="14">3</text>
+          <circle cx="340" cy="150" r="22" fill="#1c3fe4" />
+          <text x="340" y="155" text-anchor="middle" fill="#fff" font-size="14">4</text>
+          <circle cx="420" cy="150" r="22" fill="#1c3fe4" />
+          <text x="420" y="155" text-anchor="middle" fill="#fff" font-size="14">5</text>
+          <circle cx="500" cy="150" r="22" fill="#1c3fe4" />
+          <text x="500" y="155" text-anchor="middle" fill="#fff" font-size="14">6</text>
+          <circle cx="580" cy="150" r="22" fill="#1c3fe4" />
+          <text x="580" y="155" text-anchor="middle" fill="#fff" font-size="14">7</text>
+          <circle cx="180" cy="230" r="22" fill="#1c3fe4" />
+          <text x="180" y="235" text-anchor="middle" fill="#fff" font-size="14">8</text>
+          <circle cx="340" cy="230" r="22" fill="#1c3fe4" />
+          <text x="340" y="235" text-anchor="middle" fill="#fff" font-size="14">9</text>
+          <circle cx="500" cy="230" r="22" fill="#1c3fe4" />
+          <text x="500" y="235" text-anchor="middle" fill="#fff" font-size="14">10</text>
+        </g>
+        <!-- lines from you to each -->
+        <line x1="350" y1="70" x2="100" y2="128" stroke="#222" stroke-width="2" />
+        <line x1="350" y1="70" x2="180" y2="128" stroke="#222" stroke-width="2" />
+        <line x1="350" y1="70" x2="260" y2="128" stroke="#222" stroke-width="2" />
+        <line x1="350" y1="70" x2="340" y2="128" stroke="#222" stroke-width="2" />
+        <line x1="350" y1="70" x2="420" y2="128" stroke="#222" stroke-width="2" />
+        <line x1="350" y1="70" x2="500" y2="128" stroke="#222" stroke-width="2" />
+        <line x1="350" y1="70" x2="580" y2="128" stroke="#222" stroke-width="2" />
+        <line x1="350" y1="70" x2="180" y2="208" stroke="#222" stroke-width="2" />
+        <line x1="350" y1="70" x2="340" y2="208" stroke="#222" stroke-width="2" />
+        <line x1="350" y1="70" x2="500" y2="208" stroke="#222" stroke-width="2" />
+      </svg>
+      <div style="font-size:1.1em; color:#e41c23; margin-top:1em;">Imagine your empire growing—every new member means more daily payouts and more fun. The more you help others win, the bigger your own rewards!</div>
     </div>
-    
-    <div class="block">
-      <h2>😂 The Vibe</h2>
-      <p>This isn’t MLM. This is <b>MLF — Money Loves Flow</b>.</p>
-      <table>
-        <tr>
-          <th>Feature</th>
-          <th>MLM</th>
-          <th>MLF (RizzosAI)</th>
-        </tr>
-        <tr>
-          <td>Recruit stress</td>
-          <td>“You need 5 people by Friday”</td>
-          <td>“Just bring two. Then chill.”</td>
-        </tr>
-        <tr>
-          <td>Fees</td>
-          <td>Monthly, hidden, sneaky</td>
-          <td>$0 after your second recruit</td>
-        </tr>
-        <tr>
-          <td>Loyalty</td>
-          <td>Everyone’s chasing rank</td>
-          <td>Everyone’s building your empire</td>
-        </tr>
-        <tr>
-          <td>Payments</td>
-          <td>Manual, messy</td>
-          <td>Automated, daily, clean</td>
-        </tr>
-        <tr>
-          <td>Depth</td>
-          <td>Capped at 10 levels</td>
-          <td>Infinite inheritance</td>
-        </tr>
-      </table>
-    </div>
-    
-    <div class="block leaderboard">
-      <h3>🏆 Leaderboard</h3>
-      <ul class="leaderboard-list" id="leaderboard">
-        <li><span class="crown">👑</span> Grant — $500/day</li>
-        <li>Coey — $350/day</li>
-        <li>Alex — $200/day</li>
-      </ul>
-      <small style="color:#ffd700;">Want your name here? Recruit, earn, repeat.</small>
-    </div>
-    
-    <div class="block">
-      <h2>🎨 What You Can Do</h2>
-      <ul>
-        <li>Help dress up the homepage — cinematic transitions, countdown blocks, leaderboard logic</li>
-        <li>Make it feel like a king’s onboarding funnel, not a startup splash page</li>
-        <li>Add humor, polish, and viral pull to every block</li>
-      </ul>
-    </div>
-    
-    <div class="block" style="text-align:center;">
-      <h2>🔥 Final Words</h2>
-      <p>
-        We’re not just launching a site. We’re launching a dynasty.<br>
-        And you’re part of the build crew.<br>
-        <b>—Grant 👑</b>
-      </p>
-    </div>
+    <!-- End long-form sales copy -->
+    <div style="margin-top:2em; font-size:1.2em; color:#1c3fe4;">Ready to join the Empire?</div>
   </div>
-  <script>
-    // Cinematic countdown block (next payout in 12 hours)
-    function updateCountdown() {
-      const now = new Date();
-      const nextPayout = new Date();
-      nextPayout.setHours(24,0,0,0); // Midnight next day
-      const diff = nextPayout - now;
-      const hours = Math.floor(diff / (1000 * 60 * 60));
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-      document.getElementById('countdown').textContent =
-        `Next payout in ${hours}h ${minutes}m ${seconds}s`;
-    }
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
+  <a href="/login">Login</a>
+  <a href="/go?ref=airizzos&campaign=homepage" style="background:#e41c23; color:#fff; margin-top:1em;">Join the Empire (Affiliate)</a>
 </body>
+
 </html>
